@@ -1,11 +1,12 @@
 # Mini-e-Wallet-NodeJs-Express
 <h2>Features</h2>
-- Register
-- Login
-- Profile Page 
-- Top Up
-- Transfer 
-- History
+<p>- Home Page</p>
+<p>- Register</p>
+<p>- Login Page</p>
+<p>- Profile Page </p>
+<p>- Top Up</p>
+<p>- Transfer </p>
+<p>- History</p>
 
 <h2>How To Run Project with Nodejs Command Promp</h2>
 <p>1. Go to project directory, for example type on Node Command Promp...</p>
