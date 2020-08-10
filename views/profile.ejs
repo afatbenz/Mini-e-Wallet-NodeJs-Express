@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel="shortcut icon" type="image/png" href=""/>
+  <link rel="stylesheet" type="text/css" href="/sweetalert.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+  <link rel='stylesheet' href='/login_style.css' />  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+ 
+</head>
+<body style="background-color: #5480d6 !important">
+  
+  <div class="box-registration" style="width: 50%; background-color: transparent;">
+    <div class="row">
+      <div class="col-md-12 title-registration">
+        <h3 id="txthai"></h3>
+        <h3>Saldo MiniWallet kamu</h3>
+        <h1 class="txt-saldo">Rp <span id="txtsaldo"> 0</span></h1>
+      </div>
+      <div class="col-md-12 title-registration">
+        <h6>Pilih menu dibawah ini</h6>
+      </div>
+      <div class="col-md-4">
+        <!-- <a href="" class="btn btn-default">TopUp Saldo</a> -->
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">TopUp Saldo</button>
+      </div>
+      <div class="col-md-4">
+        <!-- <a href="" class="btn btn-default">Transfer</a> -->
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2">Transfer</button>
+      </div>
+      <div class="col-md-4">
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal3">Riwayat Transaksi</button>
+        
+      </div>
+     <div class="col-md-12 title-registration">
+        <a href="/logout" style="color: yellow">Keluar</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- // Modal for TopUp -->
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Top Up Saldo</h4>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+          <p>Masukan Nominal Top-Up</p>
+          <input type="text" id="nominal" name="" class="form-control input-amount inputcurrency">
+          <button type="button" class="btn btnsubmit submit-saldo" data-dismiss="modal">Top Up</button>
+        </div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- // Modal for Transfer -->
+  <div id="myModal2" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Top Up Saldo</h4>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+          <p>Lengkapi data berikut</p>
+          <input type="text" id="rekening_tujuan" name="" class="form-control input-tf" placeholder="Account e-wallet tujuan">
+          <input type="text" id="nominal_tf" name="" class="form-control input-tf inputcurrency" placeholder="Nominal Transfer">
+          <button type="button" class="btn btnsubmit submit-tf" data-dismiss="modal">Transfer</button>
+        </div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- // Modal for Riwayat Transaksi -->
+  <div id="myModal3" class="modal fade" role="dialog">
+    <div class="modal-dialog" style="width: 65%">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Top Up Saldo</h4>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+          <div class="section-history">
+              <table style="width: 100%" id="table-history">
+                <thead>
+                    <tr>
+                        <td style="width: 20px">No</t>
+                        <td style="widows: 10%">Tgl transaksi</t>
+                        <td style="widows: 10%">Type</t>
+                        <td>Activity</t>
+                        <td style="widows: 15%">Saldo awal</t>
+                        <td style="widows: 15%">Saldo Akhir</t>
+                    </tr>
+                </thead>
+                <tbody id="row-histori"></tbody>
+              </table>
+          </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+  </div>
+
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+<script src="/sweetalert.min.js"></script>
+<script src="/asset.js"></script>
+<script type="text/javascript">
+  userInfo()
+  userHistory()
+  $(document).ready(function() {
+    $('#table-history').DataTable();
+  } );
+</script>
+</body>
+</html>
