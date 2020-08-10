@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel="shortcut icon" type="image/png" href=""/>
+  <link rel='stylesheet' href='/login_style.css' />  
+  <link rel="stylesheet" type="text/css" href="/sweetalert.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ 
+</head>
+<body>
+  
+  <div class="box-registration">
+    <div class="row">
+      <div class="col-md-12 title-registration">
+        <h2 id="title-regis">Register Mini e-Wallet</h2>
+        <p id="content-regis">by Mafatichul Fuadi</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 form-registration">
+        
+          <div id="wizard-regis">
+            <div class="group-input">
+              <label>Username</label><br>
+              <input type="text" name="name" id="username" placeholder="Nama" class="input-form" minlength="3">
+            </div>
+            <div class="group-input">
+              <label>Email</label><br>
+              <input type="text" name="email" id="email_client" placeholder="Email Client" class="input-form" minlength="3">
+            </div>
+            <div class="group-input">
+              <label>Kata Sandi</label><br>
+              <div class="group-password">
+                <input type="password" name="password" id="password_client" placeholder="Kata sandi" class="input-form-password" minlength="8">
+                <i id="pass-invis" class="fa fa-eye-slash icon-eye" onclick="visiblePass()"></i>
+                <i id="pass-visib" class="fa fa-eye icon-eye" style="display: none" onclick="invisPass()"></i>
+              </div>
+            </div>
+            
+            <div class="group-input">
+              <div class="row">
+                <div class="col-md-12">
+                  <button type="button" class="btn btn-prev btn-submit">Daftar Sekarang</button>
+                </div>
+              </div>
+            </div>
+            <div class="group-input">
+              <p class="signin-link">Sudah punya akun ? <a href="/login">Login Sekarang</a></p>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/sweetalert.min.js"></script>
+<script src="/asset.js"></script>
+</body>
+</html>
