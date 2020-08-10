@@ -1,6 +1,10 @@
 # Mini-e-Wallet-NodeJs-Express
 <h2>How To Run Project with Nodejs Command Promp</h2>
-<p>Go to project directory, for example type...</p>
+<p>1. Go to project directory, for example type on Node Command Promp...</p>
 <pre>cd c:/miniwallet</pre>
-<p>Install Node Package Management that we need, you can find them in package.json</p>
+<p>2. Copy database pretest.sql on yout Mysql Database</p>
+<p>3. Open Node Command, install Node Package Management that we need, you can find them in package.json</p>
 <pre>npm install express mysql ejs body-parser express-session cryptr</pre>
+<p>4. Please wait a view seconds</p>
+<p>5. Run the project</p>
+<pre>npm start</pre>
